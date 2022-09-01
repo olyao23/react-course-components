@@ -1,6 +1,8 @@
 import { useState } from "react";
-import CourseGoal from "./CourseGoal/CourseGoal";
-import User from "./UserForm/UserForm";
+import User from "./UserComponent/User/User";
+import UserComponent from "./UserComponent/UserComponent";
+import CourseGoalComponent from "./CourseGoalsComponent/CourseGoalComponent";
+import UserForm from "./UserForm/UserForm";
 
 const App = () => {
   const [showCourseGoal, setShowCourseGoal] = useState(false);
@@ -22,7 +24,18 @@ const App = () => {
         User
       </button>
 
-      {showCourseGoal ? <CourseGoal /> : <User />}
+      {showCourseGoal ? (
+        <CourseGoalComponent />
+      ) : (
+        <div
+          style={{
+            backgroundColor: "lightpink",
+          }}
+        >
+          <UserComponent />
+        </div>
+      )}
+      {/*  treba namesto null <UserForm/> ama ne raboti sega za sega*/}
     </>
   );
 };
