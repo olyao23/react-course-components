@@ -12,6 +12,7 @@ const Button = (props) => {
         cursor: "pointer",
       }}
       type="submit"
+      onClick={props.onClick}
     >
       {props.children}
     </button>

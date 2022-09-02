@@ -1,15 +1,12 @@
 import User from "./User/User";
 import UsersList from "./UsersList/UsersList";
 import { useState } from "react";
+import Modal from "./Modal/Modal";
 
 const UserComponent = () => {
   const [initialUsersList, setInitialUsersList] = useState([]);
 
   function addUser(uUsername, uAge) {
-    if (uUsername === "" || uAge === "") {
-      return;
-    }
-
     setInitialUsersList((prevUsersList) => {
       return [
         ...prevUsersList,
