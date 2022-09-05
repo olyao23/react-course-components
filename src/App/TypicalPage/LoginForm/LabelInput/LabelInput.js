@@ -18,6 +18,7 @@ const LabelInput = (props) => {
           padding: "5px 7px",
         }}
         type={props.type}
+        onChange={props.onChange}
       />
     </>
   );
