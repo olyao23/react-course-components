@@ -14,11 +14,12 @@ const LabelInput = (props) => {
         style={{
           marginBottom: "10px",
           borderRadius: "5px",
-          border: "1px solid lightgray",
           padding: "5px 7px",
+          border: props.checkValid ? "1px solid lightgray" : "1px solid red",
         }}
         type={props.type}
         onChange={props.onChange}
+        value={props.value}
       />
     </>
   );

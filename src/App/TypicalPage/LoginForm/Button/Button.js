@@ -10,9 +10,8 @@ const Button = (props) => {
         cursor: "pointer",
         padding: "11px 40px",
         margin: "20px 0",
-        //  sega za sega ovaa boja, treba na github da ja
-        //  najdam drugata
       }}
+      onClick={props.onClick}
     >
       {props.children}
     </button>
